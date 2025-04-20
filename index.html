@@ -1,148 +1,183 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المعرفة للخدمات الطلابية</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #000000;
-            color: white;
-            text-align: center;
-            direction: rtl;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المعرفة للخدمات الطلابية</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 20px 10px;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 14px;
-        }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      direction: rtl;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            border-left: 1px solid white;
-            padding: 0 10px;
-        }
+    nav ul {
+      list-style: none;
+      padding: 20px 10px;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      font-size: 14px;
+    }
 
-        nav ul li:first-child a {
-            border-left: none;
-        }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      border-left: 1px solid white;
+      padding: 0 10px;
+    }
 
-        .logo img {
-            width: 100px;
-            margin: 20px 0;
-        }
+    nav ul li:first-child a {
+      border-left: none;
+    }
 
-        h1 {
-            font-size: 28px;
-            margin: 10px 0;
-            line-height: 1.5;
-        }
+    .logo img {
+      width: 90px;
+      margin: 20px 0;
+    }
 
-        .subtitle {
-            margin: 10px 0 20px;
-            font-size: 16px;
-        }
+    h1 {
+      font-size: 26px;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
 
-        .services {
-            list-style: none;
-            padding: 0;
-            font-size: 16px;
-            line-height: 2.2;
-            margin-bottom: 25px;
-        }
+    .subtitle {
+      margin: 10px 0 20px;
+      font-size: 16px;
+    }
 
-        .icon {
-            margin-right: 8px;
-        }
+    .services {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 25px;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: #b6a542;
-            color: black;
-            padding: 12px 24px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
+    .icon {
+      margin-right: 8px;
+    }
 
-        .contact-box {
-            background-color: #0a1c2f;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 14px;
-            line-height: 2;
-            max-width: 90%;
-            margin: auto;
-        }
+    .cta-button {
+      display: inline-block;
+      background-color: #b6a542;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
 
-        .contact-box a {
-            color: #29b6f6;
-            text-decoration: none;
-        }
+    .contact-box {
+      background-color: #0a1c2f;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 2;
+      margin: 0 auto 30px;
+      max-width: 500px;
+      width: 90%;
+    }
 
-        .links {
-            margin-top: 10px;
-            font-size: 13px;
-            color: #ccc;
-        }
+    .contact-box a {
+      color: #29b6f6;
+      text-decoration: none;
+    }
 
-        .links a {
-            color: #ccc;
-            text-decoration: none;
-        }
-    </style>
+    .links {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    /* تصميم متجاوب */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .subtitle, .services {
+        font-size: 14px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        border: none;
+        padding: 5px 0;
+      }
+
+      .cta-button {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+
+      .contact-box {
+        font-size: 13px;
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">الخدمات</a></li>
-                <li><a href="#">الدورات</a></li>
-                <li><a href="#">المدونة</a></li>
-                <li><a href="#">المتجر</a></li>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">الخدمات</a></li>
+        <li><a href="#">الدورات</a></li>
+        <li><a href="#">المدونة</a></li>
+        <li><a href="#">المتجر</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <div class="logo">
-            <img src="https://i.imgur.com/GQ7EPlL.png" alt="شعار المعرفة" />
-        </div>
-        <h1>المعرفة<br>للخدمات الطلابية</h1>
-        <p class="subtitle">نرافقك في رحلتك الاكاديمية خطوة بخطوة</p>
-        <ul class="services">
-            <li>خدمات اكاديمية <span class="icon">✏️</span></li>
-            <li>دورات وورش <span class="icon">🎥</span></li>
-            <li>استشارات طلابية <span class="icon">👥</span></li>
-        </ul>
+  <main>
+    <div class="logo">
+      <img src="https://i.imgur.com/GQ7EPlL.png" alt="شعار المعرفة" />
+    </div>
+    <h1>المعرفة<br>للخدمات الطلابية</h1>
+    <p class="subtitle">نرافقك في رحلتك الأكاديمية خطوة بخطوة</p>
+    <ul class="services">
+      <li>خدمات أكاديمية <span class="icon">✏️</span></li>
+      <li>دورات وورش <span class="icon">🎥</span></li>
+      <li>استشارات طلابية <span class="icon">👥</span></li>
+    </ul>
+    <a href="https://t.me/studentknowledge2231" class="cta-button" target="_blank">ابدأ الآن</a>
 
-        <!-- زر "ابدأ الآن" مرتبط بتليجرام -->
-        <a href="https://t.me/studentknowledge2231" class="cta-button" target="_blank">ابدأ الآن</a>
-
-        <div class="contact-box">
-            <p><span class="icon">📞</span> رقم التواصل: 
-                <a href="https://wa.me/966563537328" target="_blank">+966563537328</a>
-            </p>
-            <p><span class="icon">✈️</span> تيليجرام: 
-                <a href="https://t.me/studentknowledge2231" target="_blank">@studentknowledge2231</a>
-            </p>
-            <p class="links">
-                <a href="https://example.com/privacy" target="_blank">سياسة الخصوصية</a> -
-                <a href="https://example.com/terms" target="_blank">الشروط</a>
-            </p>
-        </div>
-    </main>
+    <div class="contact-box">
+      <p><span class="icon">📞</span> رقم التواصل:
+        <a href="https://wa.me/966563537328" target="_blank">+966563537328</a>
+      </p>
+      <p><span class="icon">✈️</span> تيليجرام:
+        <a href="https://t.me/studentknowledge2231" target="_blank">@studentknowledge2231</a>
+      </p>
+      <p class="links">
+        <a href="https://example.com/privacy" target="_blank">سياسة الخصوصية</a> -
+        <a href="https://example.com/terms" target="_blank">الشروط</a>
+      </p>
+    </div>
+  </main>
 </body>
 </html>
