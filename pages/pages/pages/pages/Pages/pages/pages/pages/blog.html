@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>المدونة - المعرفة للخدمات الطلابية</title>
   <style>
     body {
@@ -12,66 +12,90 @@
       color: white;
       direction: rtl;
       text-align: center;
-      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 20px 10px;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      border-left: 1px solid white;
+      padding: 0 10px;
+    }
+
+    nav ul li:first-child a {
+      border-left: none;
     }
 
     h1 {
-      color: #b6a542;
-      margin-bottom: 30px;
+      font-size: 28px;
+      margin: 30px 0 10px;
     }
 
-    .post {
-      background-color: #0a1c2f;
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .blog-post {
+      background-color: #111;
+      border: 1px solid #444;
       border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       text-align: right;
     }
 
-    .post h2 {
-      color: #ffd700;
+    .blog-post h3 {
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
-    .post p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #ddd;
+    .blog-post p {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
     }
 
-    .button {
+    .read-more {
       display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #b6a542;
-      color: black;
+      margin-top: 10px;
+      color: #b6a542;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .blog-post {
+        padding: 15px;
+      }
+
+      .blog-post h3 {
+        font-size: 16px;
+      }
+
+      .blog-post p {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>مدونة المعرفة</h1>
-
-  <div class="post">
-    <h2>كيف تبدأ مشروع التخرج بثقة؟</h2>
-    <p>في هذا المقال نشاركك خطوات فعالة لاختيار فكرة مناسبة، وإدارة الوقت، وتحقيق التميز في مشروع التخرج.</p>
-  </div>
-
-  <div class="post">
-    <h2>أهم أدوات الطالب الجامعي</h2>
-    <p>تعرف على أفضل التطبيقات والبرامج التي تسهّل حياتك الدراسية وتزيد من إنتاجيتك.</p>
-  </div>
-
-  <div class="post">
-    <h2>الفرق بين الاستشارات الأكاديمية والتقنية</h2>
-    <p>متى تحتاج استشارة أكاديمية ومتى تستعين بخبير تقني؟ هذا المقال يوضح لك الفرق.</p>
-  </div>
-
-  <a href="https://hussain2244111.github.io/student-knowledge/" class="button">العودة للرئيسية</a>
-</body>
-</html>
+  <header>
+    <nav>
