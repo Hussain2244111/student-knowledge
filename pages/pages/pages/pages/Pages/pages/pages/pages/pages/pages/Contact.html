@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تواصل معنا - المعرفة</title>
+  <title>تواصل معنا - المعرفة للخدمات الطلابية</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #000;
       color: white;
-      text-align: center;
       direction: rtl;
-    }
-
-    header, footer {
-      padding: 20px;
-      background-color: #0a1c2f;
+      text-align: center;
     }
 
     nav ul {
       list-style: none;
-      padding: 0;
+      padding: 20px 10px;
       margin: 0;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 15px;
+      font-size: 14px;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      padding: 8px 12px;
+      border-left: 1px solid white;
+      padding: 0 10px;
+    }
+
+    nav ul li:first-child a {
+      border-left: none;
     }
 
     h1 {
@@ -42,9 +43,9 @@
 
     .contact-container {
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
       padding: 20px;
-      background-color: #111;
+      background-color: #0a1c2f;
       border-radius: 10px;
     }
 
@@ -56,33 +57,21 @@
     .contact-container a {
       color: #29b6f6;
       text-decoration: none;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      font-size: 15px;
-    }
-
-    button {
-      background-color: #b6a542;
-      color: black;
-      padding: 10px;
-      border: none;
       font-weight: bold;
-      border-radius: 5px;
+    }
+
+    .icon {
+      margin-left: 8px;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 22px;
+        font-size: 24px;
+      }
+
+      .contact-container {
+        padding: 15px;
+        font-size: 14px;
       }
     }
   </style>
@@ -104,21 +93,16 @@
   <main>
     <h1>تواصل معنا</h1>
     <div class="contact-container">
-      <p>نسعد بخدمتك، تواصل معنا عبر الوسائل التالية:</p>
-      <p><strong>رقم الواتساب:</strong> <a href="https://wa.me/966563537328" target="_blank">+966563537328</a></p>
-      <p><strong>تيليجرام:</strong> <a href="https://t.me/studentknowledge2231" target="_blank">@studentknowledge2231</a></p>
-
-      <form>
-        <input type="text" placeholder="الاسم الكامل" required />
-        <input type="email" placeholder="البريد الإلكتروني" required />
-        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
+      <p><span class="icon">📞</span> رقم التواصل: 
+        <a href="https://wa.me/966563537328" target="_blank">+966563537328</a>
+      </p>
+      <p><span class="icon">✈️</span> تيليجرام: 
+        <a href="https://t.me/studentknowledge2231" target="_blank">@studentknowledge2231</a>
+      </p>
+      <p><span class="icon">📧</span> البريد الإلكتروني: 
+        <a href="mailto:thebrife123456@gmail.com">thebrife123456@gmail.com</a>
+      </p>
     </div>
   </main>
-
-  <footer>
-    <p>جميع الحقوق محفوظة &copy; 2025 - المعرفة للخدمات الطلابية</p>
-  </footer>
 </body>
 </html>
